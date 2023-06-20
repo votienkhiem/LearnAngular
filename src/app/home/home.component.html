@@ -40,17 +40,23 @@
         <th>Name Fruit</th>
         <th>Prices</th>
         <th>Discount</th>
+        <th>Discount</th>
+        <th>Discount</th>
       </tr>
       <tr *ngFor="let item of fruits2; index as i">
         <td>{{ i + 1 }}</td>
-        <td>{{ item.name }}</td>
+        <td>{{ item.name | uppercase}}</td>
         <td>{{ item.price }}</td>
         <!-- giá tiền sẽ đổi màu đỏ nếu nhơn 0 -->
         <td class="right">
-          <span [ngClass]="{ 'so-am': item.price < 4000 }">{{ item.price }}</span>
+          <span [ngClass]="{ 'so-am': item.price < 4000 }">{{ item.price | currency }}</span>
         </td>
         <td>
           <span *ngIf="item.discount" [ngClass]="{ 'so-am': item.price < 4000 }"> Discount !!! </span>
+        </td>
+        <!-- tự tạo pipe -->
+        <td>
+          <span [ngClass]="{ 'so-am': item.price < 4000 }"> {{ item.discount | onSale}}</span>
         </td>
       </tr>
     </table>
