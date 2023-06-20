@@ -3,7 +3,7 @@
   <h1>Xin chào tui tên là {{ name }}</h1>
   <input
     type="text"
-    name="testinput"
+    name="testInput"
     id="idname"
     value="{{ name }}"
     title="{{ title }}"
@@ -56,9 +56,23 @@
         </td>
         <!-- tự tạo pipe -->
         <td>
-          <span [ngClass]="{ 'so-am': item.price < 4000 }"> {{ item.discount | onSale}}</span>
+          <span [ngClass]="{ 'so-am': item.price < 4000 }"> {{ item.discount | onSale | uppercase}}</span>
         </td>
       </tr>
     </table>
+  </div>
+  <!-- option -->
+  <div>
+    <br>
+    <label for="city">Chọn Tỉnh / Thành phố: </label>
+    <select name="city" id="citys" (change)="changeDistricts($event)">
+      <option *ngFor="let city of cities;" >{{city.nameCity}}</option>
+    </select>
+
+    <label for="districs"> Quận / Huyện: </label>
+    <select name="districts" id="citys" >
+      <option *ngFor="let disc of districtsAndProvince">{{disc}}</option>
+    </select>
+
   </div>
 </div>
