@@ -7,10 +7,13 @@ import { OnSalePipe } from './on-sale.pipe';
 import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
 import { AppRoutingModule } from './app-routing.module';
 import { RouterModule, Routes } from '@angular/router';
+import { AboutComponent } from './about/about.component';
+import HighLightDirective from './Directives/high-light.directive';
+import { HighlightDirective } from './highlight.directive';
 
 
 const routes: Routes = [
-  // { path: '', component: HomeComponent },
+  { path: 'about', component: AboutComponent },
   { path: 'home', component: HomeComponent },
   { path: '**', component: PageNotFoundComponent }, //404
 
@@ -21,6 +24,9 @@ const routes: Routes = [
     HomeComponent,
     OnSalePipe,
     PageNotFoundComponent,
+    AboutComponent,
+    HighLightDirective,
+    HighlightDirective,
 
   ],
   imports: [
