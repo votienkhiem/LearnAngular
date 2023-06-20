@@ -10,7 +10,7 @@ import { RouterModule, Routes } from '@angular/router';
 
 
 const routes: Routes = [
-  { path: '', component: AppComponent },
+  // { path: '', component: HomeComponent },
   { path: 'home', component: HomeComponent },
   { path: '**', component: PageNotFoundComponent }, //404
 
