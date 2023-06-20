@@ -1,5 +1,22 @@
-.test{
+.test {
   border: 1px solid;
   padding: 10px;
   box-shadow: 5px 10px red;
+}
+
+.table-fruits,
+td,
+th {
+  border-collapse: collapse;
+  border: 1px solid black;
+  text-align: center;
+}
+table {
+  width: 100%;
+}
+.so-am{
+  color: red;
+}
+.right{
+  text-align: right;
 }

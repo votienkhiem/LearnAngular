@@ -20,9 +20,39 @@
   <br />
   <input type="text" [(ngModel)]="age" />
   <!-- thẻ ng template -->
-  <div *ngIf="age<=18 ; then tre;else gia"></div>
-    <ng-template #tre><h2>Bạn còn trẻ !</h2></ng-template>
+  <div *ngIf="age <= 18; then tre; else gia"></div>
+  <ng-template #tre><h2>Bạn còn trẻ !</h2></ng-template>
 
-    <ng-template #gia> <h2>Bạn đã già r :((</h2></ng-template>
+  <ng-template #gia> <h2>Bạn đã già r :((</h2></ng-template>
 
+  <!-- vong lap for -->
+  <h1>List Fruit</h1>
+  <div *ngFor="let item of fruits; index as i">
+    <ul>
+      <li>{{ i + 1 }} {{ item }}</li>
+    </ul>
+  </div>
+  <!-- table -->
+  <div>
+    <table class="table-fruits">
+      <tr>
+        <th>Number</th>
+        <th>Name Fruit</th>
+        <th>Prices</th>
+        <th>Discount</th>
+      </tr>
+      <tr *ngFor="let item of fruits2; index as i">
+        <td>{{ i + 1 }}</td>
+        <td>{{ item.name }}</td>
+        <td>{{ item.price }}</td>
+        <!-- giá tiền sẽ đổi màu đỏ nếu nhơn 0 -->
+        <td class="right">
+          <span [ngClass]="{ 'so-am': item.price < 4000 }">{{ item.price }}</span>
+        </td>
+        <td>
+          <span *ngIf="item.discount" [ngClass]="{ 'so-am': item.price < 4000 }"> Discount !!! </span>
+        </td>
+      </tr>
+    </table>
+  </div>
 </div>
