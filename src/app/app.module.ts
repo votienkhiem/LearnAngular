@@ -8,8 +8,7 @@ import { PageNotFoundComponent } from './page-not-found/page-not-found.component
 import { AppRoutingModule } from './app-routing.module';
 import { RouterModule, Routes } from '@angular/router';
 import { AboutComponent } from './about/about.component';
-import HighLightDirective from './Directives/high-light.directive';
-import { HighlightDirective } from './highlight.directive';
+
 
 
 const routes: Routes = [
@@ -25,9 +24,6 @@ const routes: Routes = [
     OnSalePipe,
     PageNotFoundComponent,
     AboutComponent,
-    HighLightDirective,
-    HighlightDirective,
-
   ],
   imports: [
     BrowserModule,
