@@ -1,3 +1,4 @@
+import { HttpServerService } from './Services/http-server.service';
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { FormsModule } from '@angular/forms';
@@ -11,6 +12,8 @@ import { RouterModule, Routes } from '@angular/router';
 import { AboutComponent } from './about/about.component';
 import { TemplateComponent } from './template/template.component';
 import { ReactiveFormComponent } from './reactive-form/reactive-form.component';
+import { GetDataComponent } from './get-data/get-data.component';
+import {HttpClientModule} from '@angular/common/http';
 
 
 
@@ -19,6 +22,7 @@ const routes: Routes = [
   { path: 'home', component: HomeComponent },
   { path: 'template-form', component: TemplateComponent },
   { path: 'reactive-form', component: ReactiveFormComponent },
+  { path: 'get-data', component: GetDataComponent },
   { path: '**', component: PageNotFoundComponent }, //404
 
 ]
@@ -31,6 +35,7 @@ const routes: Routes = [
     AboutComponent,
     TemplateComponent,
     ReactiveFormComponent,
+    GetDataComponent,
 
 
   ],
@@ -39,7 +44,9 @@ const routes: Routes = [
     FormsModule,
     AppRoutingModule,
     [RouterModule.forRoot(routes)],
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    HttpClientModule
+
   ],
   providers: [],
   bootstrap: [AppComponent],
