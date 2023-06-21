@@ -7,15 +7,27 @@ import { HttpServerService } from '../Services/http-server.service';
   styleUrls: ['./get-data.component.css']
 })
 export class GetDataComponent {
-  constructor(private httpServerServices: HttpServerService) { }
+  constructor(private httpServerServices: HttpServerService
+  ) { }
+
+  public dataComments: any = []
 
   public ngOnInit(): void {
-    this.httpServerServices.getComments().subscribe(data => {
+ this.httpServerServices.getComments().subscribe(data => {
 
       console.log('data', data)
     })
 
 
-  }
+    const payload = {};
 
+    this.httpServerServices.postComments(payload).subscribe(data => {
+
+      console.log('postData', data)
+
+      //  return data;
+    });
+  }
+  public getData():void{
+  }
 }
