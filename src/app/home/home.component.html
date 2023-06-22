@@ -1,6 +1,10 @@
 <div class="test">
   <p>home works!</p>
   <h1>Xin chào tui tên là {{ name }}</h1>
+
+  <h2 [class.changeColor]="isChangeC">Anything is possible</h2>
+  <button (click)="change()">changeColor</button>
+  <br />
   <input
     type="text"
     name="testInput"
@@ -42,37 +46,51 @@
         <th>Discount</th>
         <th>Discount</th>
         <th>Discount</th>
+        <th>Image</th>
       </tr>
       <tr *ngFor="let item of fruits2; index as i">
         <td>{{ i + 1 }}</td>
-        <td>{{ item.name | uppercase}}</td>
+        <td>{{ item.name | uppercase }}</td>
         <td>{{ item.price }}</td>
         <!-- giá tiền sẽ đổi màu đỏ nếu nhơn 0 -->
         <td class="right">
-          <span [ngClass]="{ 'so-am': item.price < 4000 }">{{ item.price | currency }}</span>
+          <span [ngClass]="{ 'so-am': item.price < 4000 }"
+            >{{ item.price | currency : " " }} vnd</span
+          >
         </td>
         <td>
-          <span *ngIf="item.discount" [ngClass]="{ 'so-am': item.price < 4000 }"> Discount !!! </span>
+          <span
+            *ngIf="item.discount"
+            [ngClass]="{ 'so-am': item.price < 4000 }"
+          >
+            Discount !!!
+          </span>
         </td>
         <!-- tự tạo pipe -->
         <td>
-          <span [ngClass]="{ 'so-am': item.price < 4000 }"> {{ item.discount | onSale | uppercase}}</span>
+          <span [ngClass]="{ 'so-am': item.price < 4000 }">
+            {{ item.discount | onSale | uppercase }}</span
+          >
+        </td>
+        <td>
+          <img [src]="item.image" alt="" style="width: 50px" />
         </td>
       </tr>
     </table>
   </div>
   <!-- option -->
   <div>
-    <br>
+    <br />
     <label for="city">Chọn Tỉnh / Thành phố: </label>
     <select name="city" id="citys" (change)="changeDistricts($event)">
-      <option *ngFor="let city of cities;" >{{city.nameCity}}</option>
+      <option *ngFor="let city of cities">{{ city.nameCity }}</option>
     </select>
 
     <label for="districs"> Quận / Huyện: </label>
-    <select name="districts" id="citys" >
-      <option *ngFor="let disc of districtsAndProvince">{{disc}}</option>
+    <select name="districts" id="citys">
+      <option *ngFor="let disc of districtsAndProvince">{{ disc }}</option>
     </select>
 
+    <p [innerHTML]="testInnerHTML"></p>
   </div>
 </div>

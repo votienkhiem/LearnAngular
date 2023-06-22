@@ -10,33 +10,38 @@ export class HomeComponent {
   public title = 'Vui lòng nhập vào đây !';
   public age = 15;
   public tin = 12;
-  public fruits = ['apple', 'orange', 'mango'];
+  public fruits: Array<string> = ['apple', 'orange', 'mango'];
   public fruits2 = [
     {
       id: 0,
       name: 'apple',
       price: 3000,
-      discount: true
+      discount: true,
+      image: 'https://giamcanthai.com/wp-content/uploads/2018/02/trai-cay-3.jpg'
     },
     {
       id: 0,
       name: 'orange',
       price: 7500,
-      discount: false
+      discount: false,
+      image: 'https://giamcanthai.com/wp-content/uploads/2018/02/trai-cay-3.jpg'
     },
     {
       id: 0,
       name: 'mango',
       price: 4000,
-      discount: false
+      discount: false,
+      image: 'https://giamcanthai.com/wp-content/uploads/2018/02/trai-cay-3.jpg'
     },
     {
       id: 0,
       name: 'mangoteen',
       price: -999,
-      discount: true
+      discount: true,
+      image: 'https://giamcanthai.com/wp-content/uploads/2018/02/trai-cay-3.jpg'
     }
   ];
+  testInnerHTML: string = '<b> Welcome to </b> VietNam'
 
   public districtsAndProvince: string[] = ['Quận / Huyện'];
   public cities = [
@@ -99,5 +104,10 @@ export class HomeComponent {
     if (search && search.length > 0) {
       this.districtsAndProvince = search[0].districts;
     }
+  }
+  isChangeC: boolean = true;
+  public change(): void {
+    this.isChangeC = !this.isChangeC
+    console.log('h2h2h2h2h2h2')
   }
 }

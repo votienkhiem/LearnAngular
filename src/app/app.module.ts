@@ -13,7 +13,8 @@ import { AboutComponent } from './about/about.component';
 import { TemplateComponent } from './template/template.component';
 import { ReactiveFormComponent } from './reactive-form/reactive-form.component';
 import { GetDataComponent } from './get-data/get-data.component';
-import {HttpClientModule} from '@angular/common/http';
+import { HttpClientModule } from '@angular/common/http';
+import { TypescriptComponent } from './TypeScipt/typescript/typescript.component';
 
 
 
@@ -23,6 +24,7 @@ const routes: Routes = [
   { path: 'template-form', component: TemplateComponent },
   { path: 'reactive-form', component: ReactiveFormComponent },
   { path: 'get-data', component: GetDataComponent },
+  { path: 'typescript', component: TypescriptComponent },
   { path: '**', component: PageNotFoundComponent }, //404
 
 ]
@@ -36,6 +38,7 @@ const routes: Routes = [
     TemplateComponent,
     ReactiveFormComponent,
     GetDataComponent,
+    TypescriptComponent,
 
 
   ],
