@@ -94,3 +94,61 @@
     <p [innerHTML]="testInnerHTML"></p>
   </div>
 </div>
+<br />
+<div class="container">
+  <form action="" method="POST" [formGroup]="loginF">
+    <legend>Form Login</legend>
+
+    <div class="form-group">
+      <label for="name">Họ và tên </label>
+      <input type="text" name="name" id="pass" formControlName="name" />
+    </div>
+    <div
+      *ngIf="loginF['controls']['name'].dirty && loginF['controls']['name'].errors">
+      <small *ngIf="loginF['controls']['name'].errors['required']">Họ và tên không được để trống</small>
+      <small *ngIf="loginF['controls']['name'].errors['minlength']">Họ và tên tối thiểu 3 ký tự</small>
+      <small *ngIf="loginF['controls']['name'].errors['maxlength']">Họ và tên tối đa 16 ký tự</small>
+    </div>
+
+    <br />
+    <div class="form-group">
+      <label for="email">email </label>
+      <input
+        type="text"
+        name="email"
+        id="email"
+        formControlName="email"
+        style="width: 200px"
+      />
+    </div>
+    <div *ngIf="loginF['controls']['email'].dirty && loginF['controls']['email'].errors">
+      <small *ngIf="loginF['controls']['email'].errors['required']">Email không được để trống</small>
+      <small *ngIf="loginF['controls']['email'].errors['email']">Email chưa đúng định dạng (demo@gmail.com)</small>
+    </div>
+    <br />
+
+    <div class="form-group">
+      <label for="pass">Mật khẩu </label>
+      <input type="text" name="pass" id="pass" formControlName="password" />
+    </div>
+
+    <div *ngIf="loginF['controls']['password'].dirty && loginF['controls']['password'].errors">
+      <small *ngIf="loginF['controls']['password'].errors['required']">Mật khẩu không được để trống</small>
+    </div>
+    <br />
+    <button (click)="onSubmit()"  [disabled]="loginF.invalid">Submit</button>
+  </form>
+</div>
+
+<div class="table">
+  <th>No</th>
+  <th>full name</th>
+  <th>email</th>
+  <th>password</th>
+  <tr *ngFor="let std of students, index as i">
+    <td>{{i + 1}}</td>
+    <td>{{std.name}}</td>
+    <td>{{std.email}}</td>
+    <td>{{std.password}}</td>
+  </tr>
+</div>

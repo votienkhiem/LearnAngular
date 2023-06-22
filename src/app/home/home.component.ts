@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { FormControl, FormGroup, Validators } from '@angular/forms';
 
 @Component({
   selector: 'app-home',
@@ -41,7 +42,6 @@ export class HomeComponent {
       image: 'https://giamcanthai.com/wp-content/uploads/2018/02/trai-cay-3.jpg'
     }
   ];
-  testInnerHTML: string = '<b> Welcome to </b> VietNam'
 
   public districtsAndProvince: string[] = ['Quận / Huyện'];
   public cities = [
@@ -52,35 +52,35 @@ export class HomeComponent {
     {
       nameCity: 'Tây Ninh',
       districts:
-        [
-          'Thành phố Tây Ninh',
-          'Huyện Bến Cầu',
-          'Huyện Gò Dầu',
-          'Huyện Châu Thành',
-          'Huyện Dương Minh Châu',
+      [
+        'Thành phố Tây Ninh',
+        'Huyện Bến Cầu',
+        'Huyện Gò Dầu',
+        'Huyện Châu Thành',
+        'Huyện Dương Minh Châu',
           'Huyện Hòa Thành',
           'Huyện Tân Biên',
           'Huyện Tân Châu',
           'Huyện Trảng Bàng'
         ]
-    },
-    {
-      nameCity: 'An Giang',
+      },
+      {
+        nameCity: 'An Giang',
       districts:
-        [
-          'Thành phố Long Xuyên',
-          'Thành phố Châu Đốc',
-          'Thị xã Tân Châu',
-          'Huyện An Phú',
-          'Huyện Châu Phú',
-          'Huyện Châu Thành',
-          'Huyện Chợ Mới',
-          'Huyện Phú Tân',
-          'Huyện Thoại Sơn',
-          'Huyện Tịnh Biên',
-          'Huyện Tri Tôn'
+      [
+        'Thành phố Long Xuyên',
+        'Thành phố Châu Đốc',
+        'Thị xã Tân Châu',
+        'Huyện An Phú',
+        'Huyện Châu Phú',
+        'Huyện Châu Thành',
+        'Huyện Chợ Mới',
+        'Huyện Phú Tân',
+        'Huyện Thoại Sơn',
+        'Huyện Tịnh Biên',
+        'Huyện Tri Tôn'
 
-        ]
+      ]
     },
   ]
 
@@ -109,5 +109,23 @@ export class HomeComponent {
   public change(): void {
     this.isChangeC = !this.isChangeC
     console.log('h2h2h2h2h2h2')
+  }
+
+  public testInnerHTML: string = '<b> Welcome to </b> VietNam'
+
+  loginF: FormGroup = new FormGroup({
+    name: new FormControl('', [Validators.required, Validators.minLength(3), Validators.maxLength(16)]),
+    email: new FormControl('', [Validators.required, Validators.email]),
+    password: new FormControl('', Validators.required),
+  });
+
+  students: Array<any> = [];
+  onSubmit(): void {
+    if (this.loginF.valid) {
+      this.students.push(this.loginF.value);
+    }
+
+    console.log(this.loginF.value)
+    console.log('mang student:',this.students)
   }
 }

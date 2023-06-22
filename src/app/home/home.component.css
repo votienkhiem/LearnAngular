@@ -29,3 +29,6 @@ table {
 .right {
   text-align: right;
 }
+.table{
+  width: 50%;
+}

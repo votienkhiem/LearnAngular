@@ -25,8 +25,33 @@ export class TypescriptComponent {
     const mangName: string[] = ['khiem', 'tien', 'vo']
     mangName.push('awesome')
     console.log('mang ten:', mangName)
+
+
+    let ten: string = 'xin chao ngay moi "adfafad"';
+    let lot: string = "chao ngay moi hom \"nay\"";
+    let dem: string = `xin "chao"`
+    console.log(ten)
+    console.log(lot)
+    console.log(dem)
+    let status: boolean = false;
+
+    let persons: {
+      name: string
+      age: number
+    }
+    persons = {
+      name: "khiem",
+      age: 25
+    }
+    console.log(persons)
   }
+
   public test(): void {
+
+
+
+
+
   }
 
 }
