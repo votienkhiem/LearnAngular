@@ -1,0 +1,20 @@
+<p>book works!</p>
+<button type="button" [disabled]="canClick" (click)="sayMessage()">
+  Trigger
+</button>
+<p [id]="sayHello" [class.color]="fontColor">
+  you can set my color in the component
+</p>
+<p>My color is {{ fontColor }}</p>
+<!-- ex2 -->
+<h2>Hello world: ngIf</h2>
+<button type="button" (click)="onEditClick()">Make text editable</button>
+<div *ngIf="canEdit; else noEdit">
+  <p>You can edit the following paragraph 'true'</p>
+</div>
+<ng-template #noEdit>
+  <p>The following paragraph is read only. Try clicking the button! 'false'</p>
+</ng-template>
+<p [contentEditable]="canEdit">{{ message2 }}</p>
+<h3>click's to count</h3>
+<button (click)="onLogMe()">click me!</button>
