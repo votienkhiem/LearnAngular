@@ -16,6 +16,10 @@ import { GetDataComponent } from './get-data/get-data.component';
 import { HttpClientModule } from '@angular/common/http';
 import { TypescriptComponent } from './TypeScipt/typescript/typescript.component';
 import { BookComponent } from './Learn/book/book.component';
+import { ProductListComponent } from './product-list/product-list.component';
+import { ProductAlertsComponent } from './product-alerts/product-alerts.component';
+import { ProductDetailsComponent } from './product-details/product-details.component';
+
 
 
 
@@ -27,6 +31,8 @@ const routes: Routes = [
   { path: 'get-data', component: GetDataComponent },
   { path: 'typescript', component: TypescriptComponent },
   { path: 'book', component: BookComponent },
+  { path: 'product-list', component: ProductListComponent },
+
   { path: '**', component: PageNotFoundComponent }, //404
 
 ]
@@ -42,6 +48,9 @@ const routes: Routes = [
     GetDataComponent,
     TypescriptComponent,
     BookComponent,
+    ProductListComponent,
+    ProductAlertsComponent,
+    ProductDetailsComponent,
 
 
   ],
