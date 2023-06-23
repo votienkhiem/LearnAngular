@@ -52,7 +52,7 @@
         <td>{{ i + 1 }}</td>
         <td>{{ item.name | uppercase }}</td>
         <td>{{ item.price }}</td>
-        <!-- giá tiền sẽ đổi màu đỏ nếu nhơn 0 -->
+        <!-- giá tiền sẽ đổi màu đỏ nếu nhỏ hơn 0 -->
         <td class="right">
           <span [ngClass]="{ 'so-am': item.price < 4000 }"
             >{{ item.price | currency : " " }} vnd</span

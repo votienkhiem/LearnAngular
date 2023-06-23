@@ -15,6 +15,7 @@ import { ReactiveFormComponent } from './reactive-form/reactive-form.component';
 import { GetDataComponent } from './get-data/get-data.component';
 import { HttpClientModule } from '@angular/common/http';
 import { TypescriptComponent } from './TypeScipt/typescript/typescript.component';
+import { BookComponent } from './Learn/book/book.component';
 
 
 
@@ -25,6 +26,7 @@ const routes: Routes = [
   { path: 'reactive-form', component: ReactiveFormComponent },
   { path: 'get-data', component: GetDataComponent },
   { path: 'typescript', component: TypescriptComponent },
+  { path: 'book', component: BookComponent },
   { path: '**', component: PageNotFoundComponent }, //404
 
 ]
@@ -39,6 +41,7 @@ const routes: Routes = [
     ReactiveFormComponent,
     GetDataComponent,
     TypescriptComponent,
+    BookComponent,
 
 
   ],

@@ -52,40 +52,42 @@ export class HomeComponent {
     {
       nameCity: 'Tây Ninh',
       districts:
-      [
-        'Thành phố Tây Ninh',
-        'Huyện Bến Cầu',
-        'Huyện Gò Dầu',
-        'Huyện Châu Thành',
-        'Huyện Dương Minh Châu',
+        [
+          'Thành phố Tây Ninh',
+          'Huyện Bến Cầu',
+          'Huyện Gò Dầu',
+          'Huyện Châu Thành',
+          'Huyện Dương Minh Châu',
           'Huyện Hòa Thành',
           'Huyện Tân Biên',
           'Huyện Tân Châu',
           'Huyện Trảng Bàng'
         ]
-      },
-      {
-        nameCity: 'An Giang',
+    },
+    {
+      nameCity: 'An Giang',
       districts:
-      [
-        'Thành phố Long Xuyên',
-        'Thành phố Châu Đốc',
-        'Thị xã Tân Châu',
-        'Huyện An Phú',
-        'Huyện Châu Phú',
-        'Huyện Châu Thành',
-        'Huyện Chợ Mới',
-        'Huyện Phú Tân',
-        'Huyện Thoại Sơn',
-        'Huyện Tịnh Biên',
-        'Huyện Tri Tôn'
+        [
+          'Thành phố Long Xuyên',
+          'Thành phố Châu Đốc',
+          'Thị xã Tân Châu',
+          'Huyện An Phú',
+          'Huyện Châu Phú',
+          'Huyện Châu Thành',
+          'Huyện Chợ Mới',
+          'Huyện Phú Tân',
+          'Huyện Thoại Sơn',
+          'Huyện Tịnh Biên',
+          'Huyện Tri Tôn'
 
-      ]
+        ]
     },
   ]
 
 
+  constructor() {
 
+  }
 
   public resetName(): void {
     console.log('Tui o day ne !!!')
@@ -126,6 +128,6 @@ export class HomeComponent {
     }
 
     console.log(this.loginF.value)
-    console.log('mang student:',this.students)
+    console.log('mang student:', this.students)
   }
 }
