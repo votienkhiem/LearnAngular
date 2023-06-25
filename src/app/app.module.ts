@@ -32,6 +32,7 @@ const routes: Routes = [
   { path: 'typescript', component: TypescriptComponent },
   { path: 'book', component: BookComponent },
   { path: 'product-list', component: ProductListComponent },
+  { path: 'products/:productId', component: ProductDetailsComponent },
 
   { path: '**', component: PageNotFoundComponent }, //404
 
