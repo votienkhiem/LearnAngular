@@ -1,0 +1,9 @@
+.shipping-item {
+  display: flex;
+  background-color: gainsboro;
+  width: 250px;
+  height: 40px;
+  justify-content: space-around;
+  margin: 10px;
+  align-items: center;
+}
