@@ -2,6 +2,7 @@ import { Component } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 import { Product, products } from '../products';
 import { CartService } from '../cart.service';
+import { Location } from '@angular/common';
 @Component({
   selector: 'app-product-details',
   templateUrl: './product-details.component.html',
@@ -11,7 +12,9 @@ export class ProductDetailsComponent {
   product: Product | undefined;
   constructor(
     private route: ActivatedRoute,
-    private cartService: CartService
+    private cartService: CartService,
+    private location: Location
+
   ) { }
   ngOnInit(): void {
     // First get the product id from the current route.
@@ -25,4 +28,8 @@ export class ProductDetailsComponent {
     this.cartService.addToCart(product);
     window.alert('Your product has been added to the cart!')
   }
+  goBack(): void {
+    this.location.back();
+  }
+
 }
