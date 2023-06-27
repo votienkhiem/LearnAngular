@@ -21,4 +21,7 @@
 <label for="">Email Book Parent</label>
 <h1>{{ emailBook }}</h1>
 <button (click)="changeEmailParent()">ChangeEmailParent</button>
-<app-template [emailBookParentToChild]="emailBook"></app-template>
+<app-template
+  [emailBookParentToChild]="emailBook"
+  (emailTemplateChildToParent)="childEmailChange($event)"
+></app-template>

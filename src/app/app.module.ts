@@ -21,6 +21,9 @@ import { ProductAlertsComponent } from './product-alerts/product-alerts.componen
 import { ProductDetailsComponent } from './product-details/product-details.component';
 import { CartComponent } from './cart/cart.component';
 import { ShippingComponent } from './shipping/shipping.component';
+import { TienComponent } from './Khim/tien/tien.component';
+import { HoaComponent } from './Khim/hoa/hoa.component';
+import { VoComponent } from './Khim/vo/vo.component';
 
 
 
@@ -58,6 +61,9 @@ const routes: Routes = [
     ProductDetailsComponent,
     CartComponent,
     ShippingComponent,
+    TienComponent,
+    HoaComponent,
+    VoComponent,
 
 
   ],
