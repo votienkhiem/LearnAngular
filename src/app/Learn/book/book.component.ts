@@ -12,6 +12,7 @@ export class BookComponent {
   sayHello: number = 1
   canClick: boolean = false
   message: string = 'Say, World'
+  emailBook: string = 'parentbook@gmail.com'
 
   sayMessage(): void {
     alert(this.message)
@@ -34,5 +35,8 @@ export class BookComponent {
   onLogMe() {
     this.logger.writeCount(this.count)
     this.count++;
+  }
+  changeEmailParent(): void {
+    this.emailBook = 'votienkhiem@gmail.com';
   }
 }

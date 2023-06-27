@@ -18,3 +18,7 @@
 <p [contentEditable]="canEdit">{{ message2 }}</p>
 <h3>click's to count</h3>
 <button (click)="onLogMe()">click me!</button>
+<label for="">Email Book Parent</label>
+<h1>{{ emailBook }}</h1>
+<button (click)="changeEmailParent()">ChangeEmailParent</button>
+<app-template [emailBookParentToChild]="emailBook"></app-template>

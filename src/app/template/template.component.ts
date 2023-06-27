@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, Input } from '@angular/core';
 import { ServiceService } from '../Services/service.service';
 
 @Component({
@@ -9,6 +9,8 @@ import { ServiceService } from '../Services/service.service';
 export class TemplateComponent {
   public name = 'admin'
   public pass = ''
+  public email = 'emailChild@gmail.com'
+  @Input() emailBookParentToChild: string | undefined;
 
 
   constructor(private service: ServiceService) {
