@@ -4,6 +4,8 @@
   <h3>{{ product.name }}</h3>
   <h4>{{ product.price | currency }}</h4>
   <p>{{ product.description }}</p>
+  <p>{{ product.image }}</p>
+
   <button type="button" (click)="addToCart(product)">Buy</button><br />
   <button type="button" (click)="goBack()">Back</button> <br />
   <a routerLink="/cart" class="button fancy-button">

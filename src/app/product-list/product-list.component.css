@@ -1,6 +1,24 @@
-.list-products {
-  width: 200px;
-  height: 180px;
+.products {
+  width: 290px;
+  height: 350px;
   background-color: rgb(215, 214, 214);
   text-align: center;
+  display: inline-block;
+  border-radius: 10px;
+  margin-top: 20px;
+}
+
+.img-products {
+  width: inherit;
+  height: 250px;
+  object-fit: cover;
+  border-radius: 10px 10px;
+}
+
+.container {
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  margin: 20px;
+  flex-wrap: wrap;
 }
