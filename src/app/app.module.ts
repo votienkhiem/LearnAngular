@@ -10,10 +10,7 @@ import { PageNotFoundComponent } from './page-not-found/page-not-found.component
 import { AppRoutingModule } from './app-routing.module';
 import { RouterModule, Routes } from '@angular/router';
 import { TemplateComponent } from './template/template.component';
-import { ReactiveFormComponent } from './reactive-form/reactive-form.component';
-import { GetDataComponent } from './get-data/get-data.component';
 import { HttpClientModule } from '@angular/common/http';
-import { TypescriptComponent } from './TypeScipt/typescript/typescript.component';
 import { BookComponent } from './Learn/book/book.component';
 import { ProductListComponent } from './product-list/product-list.component';
 import { ProductAlertsComponent } from './product-alerts/product-alerts.component';
@@ -28,21 +25,6 @@ import { FooterComponent } from './shared/footer/footer.component';
 
 
 
-const routes: Routes = [
-  { path: 'home', component: HomeComponent },
-  { path: 'template-form', component: TemplateComponent },
-  { path: 'reactive-form', component: ReactiveFormComponent },
-  { path: 'get-data', component: GetDataComponent },
-  { path: 'typescript', component: TypescriptComponent },
-  { path: 'book', component: BookComponent },
-  { path: 'product-list', component: ProductListComponent },
-  { path: 'products/:productId', component: ProductDetailsComponent },
-  { path: 'cart', component: CartComponent },
-  { path: 'shipping', component: ShippingComponent },
-
-  { path: '**', component: PageNotFoundComponent }, //404
-
-]
 @NgModule({
   declarations: [
     AppComponent,
@@ -50,9 +32,6 @@ const routes: Routes = [
     OnSalePipe,
     PageNotFoundComponent,
     TemplateComponent,
-    ReactiveFormComponent,
-    GetDataComponent,
-    TypescriptComponent,
     BookComponent,
     ProductListComponent,
     ProductAlertsComponent,
@@ -69,7 +48,6 @@ const routes: Routes = [
     BrowserModule,
     FormsModule,
     AppRoutingModule,
-    [RouterModule.forRoot(routes)],
     ReactiveFormsModule,
     HttpClientModule,
     FontAwesomeModule,
