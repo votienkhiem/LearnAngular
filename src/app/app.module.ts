@@ -9,7 +9,6 @@ import { OnSalePipe } from './on-sale.pipe';
 import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
 import { AppRoutingModule } from './app-routing.module';
 import { RouterModule, Routes } from '@angular/router';
-import { AboutComponent } from './about/about.component';
 import { TemplateComponent } from './template/template.component';
 import { ReactiveFormComponent } from './reactive-form/reactive-form.component';
 import { GetDataComponent } from './get-data/get-data.component';
@@ -30,7 +29,6 @@ import { FooterComponent } from './shared/footer/footer.component';
 
 
 const routes: Routes = [
-  { path: 'about', component: AboutComponent },
   { path: 'home', component: HomeComponent },
   { path: 'template-form', component: TemplateComponent },
   { path: 'reactive-form', component: ReactiveFormComponent },
@@ -51,7 +49,6 @@ const routes: Routes = [
     HomeComponent,
     OnSalePipe,
     PageNotFoundComponent,
-    AboutComponent,
     TemplateComponent,
     ReactiveFormComponent,
     GetDataComponent,
