@@ -1,5 +1,5 @@
 import { Component } from '@angular/core'
-import { LoggerService } from 'src/app/Services/logger.service'
+
 
 @Component({
   selector: 'app-book',
@@ -29,13 +29,7 @@ export class BookComponent {
     }
   }
 
-  constructor(private logger: LoggerService) { }
 
-  count = 0;
-  onLogMe() {
-    this.logger.writeCount(this.count)
-    this.count++;
-  }
   changeEmailParent(): void {
     this.emailBook = 'votienkhiem@gmail.com';
   }
