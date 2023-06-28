@@ -33,6 +33,7 @@ export class BookComponent {
   changeEmailParent(): void {
     this.emailBook = 'votienkhiem@gmail.com';
   }
+  // @output
   childEmailChange(event: any) {
     this.emailBook = event;
   }
