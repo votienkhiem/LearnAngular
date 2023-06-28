@@ -21,6 +21,9 @@ import { ProductAlertsComponent } from './product-alerts/product-alerts.componen
 import { ProductDetailsComponent } from './product-details/product-details.component';
 import { CartComponent } from './cart/cart.component';
 import { ShippingComponent } from './shipping/shipping.component';
+import { HeaderComponent } from './shared/header/header.component';
+import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
+import { FooterComponent } from './shared/footer/footer.component';
 
 
 
@@ -59,6 +62,9 @@ const routes: Routes = [
     ProductDetailsComponent,
     CartComponent,
     ShippingComponent,
+    HeaderComponent,
+    FooterComponent,
+
 
 
   ],
@@ -68,7 +74,8 @@ const routes: Routes = [
     AppRoutingModule,
     [RouterModule.forRoot(routes)],
     ReactiveFormsModule,
-    HttpClientModule
+    HttpClientModule,
+    FontAwesomeModule,
 
   ],
   providers: [],
