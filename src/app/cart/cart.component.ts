@@ -1,6 +1,7 @@
 import { CartService } from './../cart.service';
 import { Component } from '@angular/core';
 import { FormBuilder } from '@angular/forms';
+import { Location } from '@angular/common';
 
 
 @Component({
@@ -13,6 +14,7 @@ export class CartComponent {
   constructor(
     private cartService: CartService,
     private formBuilder: FormBuilder,
+    private location: Location
   ) { }
   checkoutForm = this.formBuilder.group({
     name: '',
@@ -22,5 +24,8 @@ export class CartComponent {
     this.items = this.cartService.clearCart();
     console.warn('Your order has been submitted', this.checkoutForm.value);
     this.checkoutForm.reset();
+  }
+  goBack(): void {
+    this.location.back();
   }
 }

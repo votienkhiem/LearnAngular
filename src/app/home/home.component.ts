@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { FormControl, FormGroup, Validators } from '@angular/forms';
+import { products } from '../products';
 
 @Component({
   selector: 'app-home',
@@ -42,6 +43,7 @@ export class HomeComponent {
       image: 'https://giamcanthai.com/wp-content/uploads/2018/02/trai-cay-3.jpg'
     }
   ];
+  products = [...products];
 
   public districtsAndProvince: string[] = ['Quận / Huyện'];
   public cities = [
@@ -130,4 +132,5 @@ export class HomeComponent {
     console.log(this.loginF.value)
     console.log('mang student:', this.students)
   }
+
 }

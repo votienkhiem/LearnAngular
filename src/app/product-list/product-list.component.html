@@ -1,3 +1,15 @@
+<div class="search">
+  <input type="text" placeholder="Search" [(ngModel)]="search" />
+  <div (click)="searchItems()">
+    <fa-icon [icon]="faSearch"></fa-icon>
+  </div>
+</div>
+<!-- search -->
+<div *ngFor="let i of listItems">
+  <h1>{{ i.name }}</h1>
+</div>
+
+<!-- product -->
 <div class="container">
   <div *ngFor="let product of products" class="products">
     <img src="{{ product.image }}" alt="" class="img-products" />

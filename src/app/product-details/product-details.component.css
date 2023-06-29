@@ -4,3 +4,16 @@
   background-color: rgb(215, 214, 214);
   text-align: center;
 }
+
+.product-img {
+  width: 350px;
+  height: 350px;
+  object-fit: cover;
+}
+
+.container {
+  width: 500px;
+  height: 500px;
+  margin: 50px;
+  text-align: center;
+}

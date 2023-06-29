@@ -12,6 +12,7 @@ import { ShippingComponent } from './shipping/shipping.component';
 
 const routes: Routes = [
   { path: 'home', component: HomeComponent },
+  { path: '', component: HomeComponent },
   { path: 'template-form', component: TemplateComponent },
   { path: 'book', component: BookComponent },
   { path: 'product-list', component: ProductListComponent },

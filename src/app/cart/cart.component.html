@@ -1,20 +1,27 @@
-<p>cart works!</p>
-<p>
-  <a routerLink="/shipping">Shipping Prices</a>
-</p>
-<div class="cart" *ngFor="let item of items">
-  <span>{{ item.name }}</span>
-  <span>{{ item.price | currency }}</span>
+<div class="container">
+  <p>
+    <a routerLink="/shipping">Shipping Prices</a>
+  </p>
+  <button (click)="goBack()">Back</button>
+  <div class="product-container">
+    <div class="cart" *ngFor="let item of items" class="item">
+      <img src="{{ item.image }}" alt="" class="item-img" />
+      <span>{{ item.name }}</span>
+      <br />
+      <span>{{ item.price | currency }}</span>
+    </div>
+  </div>
 </div>
-<form [formGroup]="checkoutForm" (ngSubmit)="onSubmit()">
-  <div>
-    <label for="name"> Name </label>
-    <input id="name" type="text" formControlName="name" />
-  </div>
-
-  <div>
-    <label for="address"> Address </label>
-    <input id="address" type="text" formControlName="address" />
-  </div>
-  <button class="button" type="submit">Purchase</button>
-</form>
+<div class="form-address">
+  <form [formGroup]="checkoutForm" (ngSubmit)="onSubmit()">
+    <div>
+      <label for="name"> Name </label>
+      <input id="name" type="text" formControlName="name" />
+    </div>
+    <div>
+      <label for="address"> Address </label>
+      <input id="address" type="text" formControlName="address" />
+    </div>
+    <button class="button" type="submit">Purchase</button>
+  </form>
+</div>

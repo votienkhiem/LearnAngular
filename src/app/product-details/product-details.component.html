@@ -1,14 +1,15 @@
-<h2>Product Details</h2>
+<div class="container">
+  <div *ngIf="product" class="details">
+    <img src="{{ product.image }}" alt="" class="product-img" />
+    <h3>{{ product.name }}</h3>
+    <!-- <h4>{{ product.price | currency : "1.0-2" }}</h4> -->
+    <h4>{{ product.price | number : "1.0-2" }} $</h4>
+    <p>{{ product.description }}</p>
 
-<div *ngIf="product" class="details">
-  <h3>{{ product.name }}</h3>
-  <h4>{{ product.price | currency }}</h4>
-  <p>{{ product.description }}</p>
-  <p>{{ product.image }}</p>
-
-  <button type="button" (click)="addToCart(product)">Buy</button><br />
-  <button type="button" (click)="goBack()">Back</button> <br />
-  <a routerLink="/cart" class="button fancy-button">
-    <em class="material-icons">shopping_cart </em>Checkout
-  </a>
+    <button type="button" (click)="addToCart(product)">Buy</button><br />
+    <button type="button" (click)="goBack()">Back</button> <br />
+    <a routerLink="/cart" class="button fancy-button">
+      <em class="material-icons">shopping_cart </em>Checkout
+    </a>
+  </div>
 </div>
