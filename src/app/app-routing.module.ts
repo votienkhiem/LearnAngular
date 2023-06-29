@@ -11,15 +11,15 @@ import { ProductListComponent } from './product-list/product-list.component';
 import { ShippingComponent } from './shipping/shipping.component';
 
 const routes: Routes = [
-  { path: 'home', component: HomeComponent },
-  { path: '', component: HomeComponent },
-  { path: 'template-form', component: TemplateComponent },
-  { path: 'book', component: BookComponent },
-  { path: 'product-list', component: ProductListComponent },
+  { path: 'home', component: HomeComponent, title: 'Home page' },
+  { path: '', component: HomeComponent, title: 'Home page' },
+  { path: 'template-form', component: TemplateComponent, title: 'Template-form' },
+  { path: 'book', component: BookComponent, title: 'Book' },
+  { path: 'product-list', component: ProductListComponent, title: 'Product' },
   { path: 'products/:productId', component: ProductDetailsComponent },
-  { path: 'cart', component: CartComponent },
-  { path: 'shipping', component: ShippingComponent },
-  { path: '**', component: PageNotFoundComponent }, //404
+  { path: 'cart', component: CartComponent, title: 'Cart' },
+  { path: 'shipping', component: ShippingComponent, title: 'Shipping' },
+  { path: '**', component: PageNotFoundComponent, title: 'Page not found' }, //404
 
 ]
 

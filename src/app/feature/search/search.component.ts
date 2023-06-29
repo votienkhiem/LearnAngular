@@ -10,8 +10,8 @@ import { products } from 'src/app/products';
 export class SearchComponent {
   faSearch = faSearch;
   products = [...products];
-  @Input() disableSearch: boolean | undefined;
-  // @Input('disableSearch') disableSearch: boolean = true;
+  @Input() disableSearch!: boolean;
+
 
 
   listItems: Array<any> = []
