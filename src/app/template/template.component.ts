@@ -18,5 +18,7 @@ export class TemplateComponent {
   changeEmailValue(): void {
     this.emailTemplateChildToParent.emit(this.email)
   }
+  ngOnInit() {
+  }
 
 }

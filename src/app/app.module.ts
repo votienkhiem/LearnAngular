@@ -20,6 +20,7 @@ import { ShippingComponent } from './shipping/shipping.component';
 import { HeaderComponent } from './shared/header/header.component';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import { FooterComponent } from './shared/footer/footer.component';
+import { SearchComponent } from './feature/search/search.component';
 
 
 
@@ -40,6 +41,7 @@ import { FooterComponent } from './shared/footer/footer.component';
     ShippingComponent,
     HeaderComponent,
     FooterComponent,
+    SearchComponent,
 
 
 

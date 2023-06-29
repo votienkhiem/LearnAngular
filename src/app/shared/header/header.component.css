@@ -23,6 +23,7 @@ div {
 .icon {
   margin-left: 40px;
   font-size: 30px;
+  cursor: pointer;
 }
 
 .header-left {
@@ -42,4 +43,12 @@ div {
 .link a {
   text-decoration: none;
   color: black;
+}
+
+.icon:hover {
+  color: red;
+}
+
+.icon:active {
+  opacity: 0.5;
 }

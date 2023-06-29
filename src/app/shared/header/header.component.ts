@@ -9,5 +9,10 @@ import { faCartPlus, faSearch, faUser } from '@fortawesome/free-solid-svg-icons'
 export class HeaderComponent {
   faSearch = faSearch;
   faUser = faUser;
-  faCartPlus = faCartPlus
+  faCartPlus = faCartPlus;
+  isSearch: boolean = true;
+
+  disableSearch(): void {
+    this.isSearch = !this.isSearch
+  }
 }

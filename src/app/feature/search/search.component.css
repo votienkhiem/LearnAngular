@@ -1,0 +1,36 @@
+.img-products {
+  width: inherit;
+  height: 250px;
+  object-fit: cover;
+  border-radius: 10px 10px;
+}
+
+.search {
+  display: flex;
+  align-items: center;
+  font-size: 27px;
+  justify-content: center;
+}
+
+.search input {
+  width: 400px;
+  height: 30px;
+  margin: 10px 10px;
+}
+
+.item-search {
+  text-align: center;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-evenly;
+  align-items: center;
+}
+
+.container-Search {
+  display: none;
+}
+
+.search-icon:active {
+  opacity: .5;
+}

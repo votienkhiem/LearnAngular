@@ -109,7 +109,7 @@ export class HomeComponent {
       this.districtsAndProvince = search[0].districts;
     }
   }
-  isChangeC: boolean = true;
+  isChangeC: boolean = false;
   public change(): void {
     this.isChangeC = !this.isChangeC
     console.log('h2h2h2h2h2h2')
