@@ -5,8 +5,11 @@
   </div>
 </div>
 <!-- search -->
-<div *ngFor="let i of listItems">
-  <h1>{{ i.name }}</h1>
+<div class="container-search">
+  <div *ngFor="let item of listItems">
+    <h1>{{ item.name }}</h1>
+    <img src="{{ item.image }}" alt="" class="img-products" />
+  </div>
 </div>
 
 <!-- product -->
