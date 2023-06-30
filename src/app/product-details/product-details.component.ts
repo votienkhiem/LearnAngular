@@ -3,6 +3,7 @@ import { ActivatedRoute } from '@angular/router';
 import { Product, products } from '../products';
 import { CartService } from '../cart.service';
 import { Location } from '@angular/common';
+import { FormControl, FormGroup } from '@angular/forms';
 @Component({
   selector: 'app-product-details',
   templateUrl: './product-details.component.html',
@@ -14,8 +15,21 @@ export class ProductDetailsComponent {
     private route: ActivatedRoute,
     private cartService: CartService,
     private location: Location
-
   ) { }
+  // Form
+  applyForm: FormGroup = new FormGroup({
+    firstName: new FormControl(''),
+    lastName: new FormControl(''),
+    email: new FormControl('')
+  })
+  submitApplication() {
+    this.cartService.submitApplication(
+      this.applyForm.value.firstName ?? '',
+      this.applyForm.value.lastName ?? '',
+      this.applyForm.value.email ?? '',
+
+    );
+  }
   ngOnInit(): void {
     // First get the product id from the current route.
     const routeParams = this.route.snapshot.paramMap;

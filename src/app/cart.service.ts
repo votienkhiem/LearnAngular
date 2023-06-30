@@ -16,6 +16,9 @@ export class CartService {
   getItems(): Product[] {
     return this.items;
   }
+  getItemsById(id: number) {
+    return this.items.find(itemProduct => itemProduct.id === id)
+  }
   clearCart() {
     this.items = [];
     return this.items;
@@ -23,4 +26,10 @@ export class CartService {
   getShippingPrices() {
     return this.http.get<{ type: string, price: number }[]>('/assets/shipping.json')
   }
+  submitApplication(firstName: string, lastName: string, email: string) {
+    console.log(`Homes application received: firstName: ${firstName}, lastName: ${lastName}, email: ${email}.`);
+  }
+
+
+
 }
