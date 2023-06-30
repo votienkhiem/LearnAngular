@@ -1,6 +1,11 @@
 <div class="container-Seach" [class.container-Search]="disableSearch">
   <div class="search">
-    <input type="text" placeholder="Search" #search />
+    <input
+      type="text"
+      placeholder="Search"
+      #search
+      (keyup.enter)="searchItems(search.value)"
+    />
     <div (click)="searchItems(search.value)" class="search-icon">
       <fa-icon [icon]="faSearch" title="Search"></fa-icon>
     </div>

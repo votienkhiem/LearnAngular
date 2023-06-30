@@ -20,9 +20,3 @@
   <input type="text" name="search" id="search" #filter />
   <button (click)="filterResult(filter.value)">Search</button>
 </div>
-<div *ngFor="let i of filteredProduct">
-  <span>{{ i.name }}</span>
-  <span>{{ i.image }}</span>
-  <span>{{ i.price }}</span>
-  <span>{{ i.description }}</span>
-</div>

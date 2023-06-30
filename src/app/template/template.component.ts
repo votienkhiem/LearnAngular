@@ -15,19 +15,12 @@ export class TemplateComponent {
   @Input() emailBookParentToChild: string | undefined;
   @Output() emailTemplateChildToParent = new EventEmitter<string>();
 
-  filteredProduct: Product[] = []
-  products2: Product[] = []
-  shoe = [...products]
+
   cartService: CartService = inject(CartService);
   constructor() {
-
-    this.products2 = this.shoe
   }
   filterResult(text: string) {
-    if (!text) {
-      this.filteredProduct = this.products2;
-    }
-    this.filteredProduct = this.products2.filter(data => data?.name.toLowerCase().includes(text.toLowerCase()));
+
   }
 
   changeEmailValue(): void {

@@ -20,7 +20,6 @@ export class SearchComponent {
   listItems: Array<any> = [];
   listEmpty: Product[] = [];
 
-
   public searchItems(text: string): void {
 
     if (!text) {
@@ -28,8 +27,6 @@ export class SearchComponent {
     }
 
     this.listItems = this.products.filter(data => data.name.toLowerCase().includes(text.toLowerCase()));
-
-
 
   }
 }
