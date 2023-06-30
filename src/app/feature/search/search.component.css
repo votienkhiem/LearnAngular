@@ -34,3 +34,7 @@
 .search-icon:active {
   opacity: .5;
 }
+
+.search-icon {
+  cursor: pointer;
+}

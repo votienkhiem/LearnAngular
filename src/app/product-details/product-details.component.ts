@@ -45,5 +45,8 @@ export class ProductDetailsComponent {
   goBack(): void {
     this.location.back();
   }
+  empty(): void {
+    this.applyForm.reset();
+  }
 
 }
