@@ -1,6 +1,6 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { RouterModule, Routes } from '@angular/router';
+import { PreloadAllModules, RouterModule, Routes } from '@angular/router';
 import { HomeComponent } from './home/home.component';
 import { TemplateComponent } from './template/template.component';
 import { BookComponent } from './Learn/book/book.component';
@@ -19,6 +19,7 @@ const routes: Routes = [
   { path: 'products/:productId', component: ProductDetailsComponent },
   { path: 'cart', component: CartComponent, title: 'Cart' },
   { path: 'shipping', component: ShippingComponent, title: 'Shipping' },
+  { path: 'test123', loadChildren: () => import('./home/test/test.module').then(m => m.TestModule) },
   { path: '**', component: PageNotFoundComponent, title: 'Page not found' }, //404
 
 ]
@@ -26,7 +27,9 @@ const routes: Routes = [
 @NgModule({
   declarations: [],
   imports: [
-    RouterModule.forRoot(routes),
+    RouterModule.forRoot(routes, {
+      preloadingStrategy: PreloadAllModules,
+    }),
   ],
   exports: [RouterModule]
 })

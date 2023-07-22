@@ -8,6 +8,7 @@ import { HttpClient } from '@angular/common/http';
 })
 export class CartService {
   items: Product[] = [];
+  url: string = 'http://localhost:3000/shoes';
 
   constructor(private http: HttpClient) { }
   addToCart(product: Product) {
@@ -15,9 +16,6 @@ export class CartService {
   }
   getItems(): Product[] {
     return this.items;
-  }
-  getItemsById(id: number) {
-    return this.items.find(itemProduct => itemProduct.id === id)
   }
   clearCart() {
     this.items = [];
@@ -29,7 +27,15 @@ export class CartService {
   submitApplication(firstName: string, lastName: string, email: string) {
     console.log(`Homes application received: firstName: ${firstName}, lastName: ${lastName}, email: ${email}.`);
   }
+  async getAllShoes(): Promise<Product[]> {
+    const data = await fetch(this.url);
+    return await data.json() ?? [];
+  }
 
 
+  async getItemsById(id: number): Promise<Product[] | undefined> {
+    const data = await fetch(`${this.url}/${id}`);
+    return await data.json() ?? [];
+  }
 
 }

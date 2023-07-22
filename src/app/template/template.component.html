@@ -18,5 +18,12 @@
 <div>
   <label for="search">Search</label>
   <input type="text" name="search" id="search" #filter />
-  <button (click)="filterResult(filter.value)">Search</button>
+  <button (click)="filterResult()">Search</button>
+</div>
+
+<div *ngFor="let i of arrShoe">
+  <span>{{ i.name }}</span>
+  <span>{{ i.price }}</span>
+  <span>{{ i.description }}</span>
+  <a [routerLink]="['/products', i.id]">{{ i.id }}</a>
 </div>

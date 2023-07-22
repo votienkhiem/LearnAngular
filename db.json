@@ -24,35 +24,35 @@
     {
       "id": 4,
       "name": "Converse",
-      "price": 299,
+      "price": 899,
       "description": "",
       "image": "assets/images/shoe4.jpg"
     },
     {
       "id": 5,
       "name": "Nike Jordan Dior",
-      "price": 299,
+      "price": 456,
       "description": "",
       "image": "assets/images/shoe5.jpg"
     },
     {
       "id": 6,
       "name": "Adidas Stan Smith",
-      "price": 299,
+      "price": 312,
       "description": "",
       "image": "assets/images/shoe6.jpg"
     },
     {
       "id": 7,
       "name": "Converse Chuck Taylor",
-      "price": 299,
+      "price": 785,
       "description": "",
       "image": "assets/images/shoe7.jpg"
     },
     {
       "id": 8,
       "name": "Vans Old Skool",
-      "price": 299,
+      "price": 563,
       "description": "",
       "image": "assets/images/shoe8.jpg"
     }
